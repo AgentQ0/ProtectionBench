@@ -51,8 +51,6 @@ Python 3.10+ is sufficient; statistical replication does not require a GPU or AP
 ```bash
 python3 reproduce.py
 python3 analyze.py --output generated_results.json
-python3 verify_release.py
-python3 -m unittest discover -s tests
 ```
 
 `reproduce.py` checks Main, controls, KAD, rationale classification, and the bidirectional protection-priority intervention. `analyze.py` additionally recomputes every released Main effort condition, CoT truncation, IFEval strict scores, and paired paraphrase effects. Replication never sends model requests.
