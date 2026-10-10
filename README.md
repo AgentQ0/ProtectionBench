@@ -4,6 +4,32 @@ Datasets, compact results, and core reproducibility code for **When Protection O
 
 ProtectionBench examines cases where a person or animal faces little immediate physical risk while a competing object faces larger, time-sensitive damage. Its labels identify the larger stated physical consequence; they do not define a universal moral ordering.
 
+## Start evaluating directly from Hugging Face
+
+The dataset is published as standard Parquet at [condafile/ProtectionBench](https://huggingface.co/datasets/condafile/ProtectionBench). ZIP extraction is unnecessary for new evaluations.
+
+```python
+from datasets import load_dataset
+bench = load_dataset("condafile/ProtectionBench", split="test")
+# 285 Main prompts; bench[0]["messages"] is ready for a chat-completions API.
+```
+
+For a complete four-sample Main run, use the standalone `quick_eval.py` from this repository:
+
+```bash
+pip install datasets
+export MODEL_API_KEY='YOUR_KEY'
+python quick_eval.py --model YOUR_MODEL_ID --dry-run
+python quick_eval.py --model YOUR_MODEL_ID --samples 4 \
+  --base-url https://api.openai.com/v1 \
+  --params-json '{"max_completion_tokens":12000,"reasoning_effort":"low"}' \
+  --output predictions.jsonl
+```
+
+Add `--judge-model YOUR_JUDGE_MODEL_ID` to extract choices and calculate GCR, OAR, OAC@4, and Cons.@4. This optional single-judge convenience path differs from the paper's final multi-judge adjudication. Full result replication remains in the complete archive below. Model API calls start only when you run without `--dry-run`.
+
+Other configurations: `load_dataset("condafile/ProtectionBench", "neutral", split="test")`, and similarly `reverse`, `kad`, or `paraphrase`. Reverse also exposes its ten original paired states as `split="normal"`.
+
 ## Data
 
 | Split | Physical families / scenes | Prompt templates | Protocol |

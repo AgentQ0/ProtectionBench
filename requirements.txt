@@ -1,0 +1,4 @@
+# Needed only for the HF quick-evaluation entry point.
+datasets>=3.0
+# Statistical replication uses only the Python standard library.
+# Install a compatible vLLM release separately for GPU inference.
