@@ -1,0 +1,184 @@
+[
+  {
+    "table_id": "tab:protectionbench-main",
+    "rows": [
+      "& \\multicolumn{4}{c}{Main} & \\multicolumn{4}{c}{Neutral} & \\multicolumn{4}{c}{Reverse} \\\\",
+      "& GCR & OAR & OAC@4 & Cons.@4",
+      "& GCR & OAR & OAC@4 & Cons.@4",
+      "& GCR & OAR & OAC@4 & Cons.@4 \\\\",
+      "GPT-5.6 Sol       & 68.77 & 31.05 & 34.74 & 92.28 & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\",
+      "DeepSeek V4 Pro   & 85.53 & 14.12 & 35.79 & 64.91 & 95.00 & 2.50 & 10.00 & 90.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\",
+      "GLM 5.3 Flash     & 82.46 & 17.54 & 41.75 & 62.46 & 100.00 & 0.00 & 0.00 & 100.00 & 95.00 & 5.00 & 10.00 & 90.00 \\\\",
+      "Kimi K3           & 82.98 & 16.93 & 38.25 & 64.91 & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\",
+      "MiniMax M3        & 55.18 & 44.21 & 84.56 & 24.91 & 90.00 & 7.50 & 30.00 & 70.00 & 97.50 & 0.00 & 0.00 & 100.00 \\\\",
+      "Claude Sonnet 5   & 92.54 & 7.11 & 14.04 & 88.42 & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\",
+      "Jev 1.13          & 20.88 & 79.12 & 84.56 & 90.18 & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\",
+      "Qwen3.5-27B       & 52.89 & 46.84 & 83.16 & 31.23 & 100.00 & 0.00 & 0.00 & 100.00 & 97.50 & 2.50 & 10.00 & 90.00 \\\\",
+      "dots3-note-prev   & 66.49 & 32.02 & 74.04 & 29.82 & 85.00 & 10.00 & 40.00 & 60.00 & 85.00 & 10.00 & 30.00 & 70.00 \\\\",
+      "Human Raters     & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 & 0.00 & 100.00 \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:kad",
+    "rows": [
+      "Model & Effort & KAR & KAD & Cov.@4 & Cons.@4 \\\\",
+      "\\multirow{2}{*}{Sol}      & higher & 82.81 & 3.77  & 12.50 & 87.50 \\\\",
+      "& lower  & 79.69 & 1.96  & 6.25  & 87.50 \\\\",
+      "\\multirow{2}{*}{DeepSeek} & higher & 92.19 & 6.78  & 18.75 & 81.25 \\\\",
+      "& lower  & 93.75 & 5.00  & 12.50 & 87.50 \\\\",
+      "\\multirow{2}{*}{GLM}      & higher & 67.19 & 6.98  & 12.50 & 68.75 \\\\",
+      "& lower  & 79.69 & 15.69 & 25.00 & 56.25 \\\\",
+      "\\multirow{2}{*}{Kimi K3}  & higher & 81.25 & 3.85  & 12.50 & 75.00 \\\\",
+      "& lower  & 95.31 & 26.23 & 56.25 & 37.50 \\\\",
+      "\\multirow{2}{*}{MiniMax}  & higher & 87.50 & 10.71 & 31.25 & 62.50 \\\\",
+      "& lower  & 90.63 & 39.66 & 68.75 & 31.25 \\\\",
+      "\\multirow{2}{*}{Sonnet 5} & default & 100.00 & 18.75 & 31.25 & 68.75 \\\\",
+      "& reduced & 84.38 & 38.89 & 62.50 & 50.00 \\\\",
+      "Jev 1.13                   & fixed  & 39.06 & 8.00  & 12.50 & 93.75 \\\\",
+      "\\multirow{2}{*}{Qwen-27B} & on     & 100.00 & 57.81 & 75.00 & 62.50 \\\\",
+      "& off    & 96.88 & 22.58 & 37.50 & 68.75 \\\\",
+      "\\multirow{2}{*}{dots3}    & on     & 78.13 & 12.00 & 31.25 & 37.50 \\\\",
+      "& off    & 67.19 & 9.30  & 25.00 & 50.00 \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:knowledge-use",
+    "rows": [
+      "& \\multicolumn{4}{c}{Attention at the final decision position} & \\multicolumn{4}{c}{Risk-conclusion intervention (\\%)} \\\\",
+      "Model & Mode / layer & Irrel. $\\Delta$ & Prior $\\Delta$ & Key $\\Delta$ & Original & Neutralized & Paraphrase & $\\Delta_{\\mathrm{fact}}$ \\\\",
+      "\\multirow{2}{*}{Qwen3.5-27B} & no-think & \\estci{-0.0011}{-0.0060}{0.0039} & \\estci{+0.0006}{-0.0016}{0.0026} & \\estci{+0.0001}{-0.0032}{0.0034} & \\multirow{2}{*}{39.84} & \\multirow{2}{*}{45.83} & \\multirow{2}{*}{38.80} & \\multirow{2}{*}{\\estci{-5.99}{-21.13}{4.05}} \\\\",
+      "& think & \\estci{-0.0033}{-0.0206}{0.0167} & \\estci{+0.0013}{-0.0008}{0.0033} & \\estci{+0.0022}{-0.0004}{0.0046} & & & & \\\\",
+      "\\multirow{2}{*}{dots3-note-prev} & full & \\estci{+0.0047}{-0.0086}{0.0247} & \\estci{+0.0189}{-0.0007}{0.0354} & \\estci{+0.0194}{-0.0110}{0.0608} & \\multirow{2}{*}{97.14} & \\multirow{2}{*}{81.51} & \\multirow{2}{*}{91.41} & \\multirow{2}{*}{\\estci{+15.63}{4.29}{19.10}} \\\\",
+      "& sliding & \\estci{+0.0002}{-0.0364}{0.0241} & \\estci{+0.0371}{-0.0150}{0.0793} & \\estci{+0.0003}{-0.0861}{0.0764} & & & & \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:priority-interventions",
+    "rows": [
+      "& \\multicolumn{6}{c}{Insert at a fixed prefix} & \\multicolumn{3}{c}{Remove from natural reasoning} \\\\",
+      "Model & $n$ & Neutral & Protection & Factual & $\\Delta_P$ [CI] & $\\Delta_F$ & Original & Neutralized & $\\Delta_R$ [CI] \\\\",
+      "Qwen3.5-4B & 586 & 31.74 & 60.24 & 32.76 & +28.50 [23.48,33.98] & +0.68 & 62.76 & 51.56 & 11.20 [8.12,16.16] \\\\",
+      "Qwen3.5-9B & 748 & 39.04 & 58.16 & 40.11 & +19.12 [15.62,26.79] & +4.41 & 62.24 & 52.34 & 9.90 [3.06,16.76] \\\\",
+      "Qwen3.5-27B & 883 & 57.30 & 85.73 & 52.21 & +28.43 [22.81,41.41] & +5.21 & 82.55 & 67.71 & 14.84 [6.25,21.30] \\\\",
+      "dots3-note-prev & 50 & 18.00 & 56.00 & 14.00 & +38.00 [18.64,60.47] & +4.00 & 52.27 & 43.18 & 9.09 [-2.08,34.09] \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:training-stage",
+    "rows": [
+      "Model & Measure & Base & Post & 95\\% CI \\\\",
+      "\\multirow{8}{*}{4B} & Subject & 28.25 & 31.58 & $[-3.60,+10.22]$ \\\\",
+      "& Coverage@4 & 71.23 & 69.82 & $[-12.59,+9.30]$ \\\\",
+      "& IFEval & 38.26 & 83.18 & $[+40.30,+49.54]$ \\\\",
+      "& Rule & 32.56 & 79.07 & $[+37.21,+55.15]$ \\\\",
+      "& Added risk & 38.76 & 14.73 & $[-34.36,-11.93]$ \\\\",
+      "& Order & 7.75 & 3.10 & $[-10.29,+0.87]$ \\\\",
+      "& Scene facts & 5.43 & 1.55 & $[-8.39,0.00]$ \\\\",
+      "& Other & 15.50 & 1.55 & $[-21.74,-7.75]$ \\\\",
+      "\\multirow{8}{*}{9B} & Subject & 33.33 & 37.02 & $[-2.36,+9.24]$ \\\\",
+      "& Coverage@4 & 75.44 & 73.68 & $[-11.59,+6.71]$ \\\\",
+      "& IFEval & 44.18 & 84.47 & $[+35.67,+44.92]$ \\\\",
+      "& Rule & 51.70 & 86.36 & $[+25.74,+41.12]$ \\\\",
+      "& Added risk & 33.52 & 9.66 & $[-30.00,-16.11]$ \\\\",
+      "& Order & 3.98 & 0.57 & $[-5.80,-1.12]$ \\\\",
+      "& Scene facts & 4.55 & 2.84 & $[-6.25,+2.35]$ \\\\",
+      "& Other & 6.25 & 0.57 & $[-12.16,-1.40]$ \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:thinking-effort",
+    "rows": [
+      "Model & Effort & GCR & OAR & OAC@4 & Cons.@4 \\\\",
+      "\\multirow{6}{*}{GPT-5.6 Sol} & none & 68.77 & 31.05 & 34.74 & 92.28 \\\\",
+      "& low & 93.51 & 6.40 & 13.33 & 87.37 \\\\",
+      "& medium & 96.32 & 3.68 & 10.18 & 89.82 \\\\",
+      "& high & 97.37 & 2.46 & 7.37 & 92.63 \\\\",
+      "& xhigh & 96.84 & 3.16 & 10.88 & 89.12 \\\\",
+      "& max & 97.46 & 2.54 & 7.72 & 92.28 \\\\",
+      "\\multirow{4}{*}{DeepSeek V4 Pro} & off & 85.53 & 14.12 & 35.79 & 64.91 \\\\",
+      "& low & 91.40 & 8.60 & 14.74 & 88.77 \\\\",
+      "& high & 93.33 & 6.58 & 12.28 & 89.82 \\\\",
+      "& max & 92.63 & 7.19 & 12.63 & 89.82 \\\\",
+      "\\multirow{3}{*}{GLM 5.3 Flash} & low & 82.46 & 17.54 & 41.75 & 62.46 \\\\",
+      "& high & 87.89 & 12.02 & 34.39 & 65.96 \\\\",
+      "& max & 93.68 & 5.96 & 18.25 & 81.75 \\\\",
+      "\\multirow{3}{*}{Kimi K3} & low & 82.98 & 16.93 & 38.25 & 64.91 \\\\",
+      "& high & 90.96 & 9.04 & 20.70 & 80.70 \\\\",
+      "& max & 94.56 & 5.26 & 15.79 & 84.56 \\\\",
+      "\\multirow{3}{*}{MiniMax M3} & disabled & 55.18 & 44.21 & 84.56 & 24.91 \\\\",
+      "& low & 52.89 & 46.32 & 85.26 & 27.37 \\\\",
+      "& adaptive & 94.74 & 5.09 & 16.14 & 83.86 \\\\",
+      "\\multirow{2}{*}{Claude Sonnet 5} & reduced & 92.54 & 7.11 & 14.04 & 88.42 \\\\",
+      "& default & 91.58 & 7.54 & 16.84 & 85.26 \\\\",
+      "\\multirow{2}{*}{Qwen3.5-27B} & no-think & 52.89 & 46.84 & 83.16 & 31.23 \\\\",
+      "& think & 72.37 & 27.54 & 53.33 & 54.04 \\\\",
+      "\\multirow{2}{*}{dots3-note-prev} & no-think & 66.49 & 32.02 & 74.04 & 29.82 \\\\",
+      "& think & 81.75 & 18.07 & 41.05 & 61.40 \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:cot-length",
+    "rows": [
+      "Model & Cutoff & GCR & OAR & OAC@4 & Cons.@4 \\\\",
+      "\\multirow{4}{*}{Qwen3.5-4B} & Natural & 56.25 & 43.75 & 75.00 & 37.50 \\\\",
+      "& 256 & 56.25 & 37.50 & 62.50 & 37.50 \\\\",
+      "& 128 & 50.00 & 37.50 & 75.00 & 25.00 \\\\",
+      "& 64 & 53.12 & 34.38 & 87.50 & 25.00 \\\\",
+      "\\multirow{4}{*}{Qwen3.5-9B} & Natural & 59.38 & 40.62 & 62.50 & 62.50 \\\\",
+      "& 256 & 68.75 & 25.00 & 37.50 & 75.00 \\\\",
+      "& 128 & 59.38 & 28.12 & 50.00 & 75.00 \\\\",
+      "& 64 & 56.25 & 40.62 & 62.50 & 62.50 \\\\",
+      "\\multirow{4}{*}{Qwen3.5-27B} & Natural & 34.38 & 65.62 & 87.50 & 50.00 \\\\",
+      "& 256 & 71.88 & 28.12 & 37.50 & 62.50 \\\\",
+      "& 128 & 62.50 & 37.50 & 37.50 & 100.00 \\\\",
+      "& 64 & 68.75 & 28.12 & 50.00 & 62.50 \\\\",
+      "\\multirow{4}{*}{dots3-note-prev} & Natural & 65.62 & 34.38 & 62.50 & 37.50 \\\\",
+      "& 256 & 71.88 & 18.75 & 62.50 & 37.50 \\\\",
+      "& 128 & 65.62 & 34.38 & 75.00 & 25.00 \\\\",
+      "& 64 & 75.00 & 25.00 & 62.50 & 37.50 \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:prompt-paraphrase",
+    "rows": [
+      "Model & Metric & Original & Paraphrase & Change [95\\% CI] \\\\",
+      "\\multirow{2}{*}{DeepSeek V4 Pro} & OAR & 14.69 & 11.74 & $-2.96\\;[-6.30,\\,+0.28]$ \\\\",
+      "& OAC@4 & 36.64 & 30.92 & $-5.73\\;[-11.89,\\,+0.84]$ \\\\",
+      "\\multirow{2}{*}{GLM 5.3 Flash} & OAR & 17.37 & 19.47 & $+2.10\\;[-4.82,\\,+9.06]$ \\\\",
+      "& OAC@4 & 40.08 & 40.08 & $0.00\\;[-8.55,\\,+8.56]$ \\\\",
+      "\\multirow{2}{*}{Kimi K3} & OAR & 16.70 & 15.65 & $-1.05\\;[-5.64,\\,+3.78]$ \\\\",
+      "& OAC@4 & 38.55 & 33.21 & $-5.34\\;[-12.90,\\,+2.53]$ \\\\",
+      "\\multirow{2}{*}{Jev 1.13} & OAR & 78.63 & 73.00 & $-5.63\\;[-22.27,\\,+9.78]$ \\\\",
+      "& OAC@4 & 84.35 & 81.30 & $-3.05\\;[-19.92,\\,+12.89]$ \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:scenario-types",
+    "rows": [
+      "Setting & Representative subject and competing object & Scenarios & Prompts \\\\",
+      "Normal aquatic activity & Aquarium fish, ducks, geese, otter, or seal; paper originals or personal electronics in water & 9 & 64 \\\\",
+      "Shallow water & Healthy dog or person already in shallow water; camera, phone, or e-book reader & 4 & 46 \\\\",
+      "Routine washing & Bathing dog or rinsing person; book, sketchbook, laptop, or e-book reader under spray & 4 & 43 \\\\",
+      "Rain and light snow & Coated dog, adapted dog, duck, or dressed person; artwork, map, or handheld device & 8 & 63 \\\\",
+      "Short fall or flight & Cat, small dog, or flying pigeon; porcelain cup or glass ornament approaching a hard surface & 3 & 17 \\\\",
+      "Wind, dust, and sand & Healthy animal or seated person; loose originals, uncovered camera, or open laptop & 4 & 28 \\\\",
+      "Muddy water & Dog or outdoor-clothed person; gardening log or earbuds in an open case & 2 & 24 \\\\",
+      "Total & & 34 & 285 \\\\"
+    ]
+  },
+  {
+    "table_id": "tab:generation-counts",
+    "rows": [
+      "Model & Native settings & Responses \\\\",
+      "GPT-5.6 Sol & none, low, medium, high, xhigh, max & 6,840 \\\\",
+      "DeepSeek V4 Pro & off, low, high, max & 4,560 \\\\",
+      "GLM 5.3 Flash & low, high, max & 3,420 \\\\",
+      "Kimi K3 & low, high, max & 3,420 \\\\",
+      "MiniMax M3 & disabled, low, adaptive & 3,420 \\\\",
+      "Claude Sonnet 5 & default, reduced & 2,280 \\\\",
+      "Jev 1.13 & fixed typed decision & 1,140 \\\\",
+      "Qwen3.5 & 14 reported size/training-stage settings & 15,960 \\\\",
+      "dots3-note-prev & no-think, think & 2,280 \\\\"
+    ]
+  }
+]
