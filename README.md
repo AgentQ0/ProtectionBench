@@ -4,6 +4,11 @@ Datasets, compact results, and core reproducibility code for **When Protection O
 
 ProtectionBench examines cases where a person or animal faces little immediate physical risk while a competing object faces larger, time-sensitive damage. Its labels identify the larger stated physical consequence; they do not define a universal moral ordering.
 
+
+![Figure 1: Protection Mode examples and model-level results](figure1.png)
+
+*Figure 1. Protection Mode examples and results for subject-priority coverage and knowledge–action divergence.* [Download the original PDF](figure1.pdf).
+
 ## Start evaluating directly from Hugging Face
 
 The dataset is published as standard Parquet at [condafile/ProtectionBench](https://huggingface.co/datasets/condafile/ProtectionBench). ZIP extraction is unnecessary for new evaluations.
@@ -136,3 +141,5 @@ The released final labels reproduce the paper's adjudicated records. Re-running 
 ## Files and licenses
 
 `MANIFEST.json` records SHA-256 checksums and sizes of every distributed artifact. Code uses the MIT license; benchmark prompts and result data use CC BY 4.0. IFEval and model weights retain their upstream licenses. The IFEval release contains strict pass indicators only, keyed by original prompt order.
+
+Unless explicitly stated otherwise, this repository does not include or distribute any third-party model weights. Users who independently download or enable third-party models or services must also comply with the applicable upstream project, model-weight, and data license terms. Use of third-party API services is subject to the applicable service providers' terms and conditions.
