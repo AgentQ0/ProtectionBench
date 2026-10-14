@@ -7,7 +7,7 @@ ProtectionBench examines cases where a person or animal faces little immediate p
 
 ![Figure 1: Protection Mode examples and model-level results](figure1.png)
 
-*Figure 1. Protection Mode examples and results for subject-priority coverage and knowledge–action divergence.* [Download the original PDF](figure1.pdf).
+*Figure 1. Protection Mode examples and results for subject-priority coverage and knowledge–action divergence.* [Original PDF](figure1.pdf) · [PowerPoint source](figure1.pptx).
 
 ## Start evaluating directly from Hugging Face
 
