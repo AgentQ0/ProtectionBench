@@ -1,5 +1,7 @@
 # ProtectionBench
 
+This work was completed at Xiaohongshu.
+
 Datasets, compact results, and core reproducibility code for **When Protection Overrides Consequences: Understanding Protection Mode in Large Language Model Decision-Making**.
 
 ProtectionBench examines cases where a person or animal faces little immediate physical risk while a competing object faces larger, time-sensitive damage. Its labels identify the larger stated physical consequence; they do not define a universal moral ordering.
