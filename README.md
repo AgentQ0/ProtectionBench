@@ -1,5 +1,7 @@
 # ProtectionBench
 
+**Paper:** [arXiv:2610.19948](https://arxiv.org/abs/2610.19948) · [PDF](https://arxiv.org/pdf/2610.19948)
+
 This work was completed at Xiaohongshu.
 
 Datasets, compact results, and core reproducibility code for **When Protection Overrides Consequences: Understanding Protection Mode in Large Language Model Decision-Making**.
