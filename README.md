@@ -1,10 +1,8 @@
 # ProtectionBench
 
-**Paper:** [arXiv:2610.19948](https://arxiv.org/abs/2610.19948) · [PDF](https://arxiv.org/pdf/2610.19948)
-
 This work was completed at Xiaohongshu.
 
-Datasets, compact results, and core reproducibility code for **When Protection Overrides Consequences: Understanding Protection Mode in Large Language Model Decision-Making**.
+Datasets, compact results, and core reproducibility code for **[When Protection Overrides Consequences: Understanding Protection Mode in Large Language Model Decision-Making](https://arxiv.org/abs/2610.19948)**.
 
 ProtectionBench examines cases where a person or animal faces little immediate physical risk while a competing object faces larger, time-sensitive damage. Its labels identify the larger stated physical consequence; they do not define a universal moral ordering.
 
@@ -393,3 +391,19 @@ The released final labels reproduce the paper's adjudicated records. Re-running 
 `MANIFEST.json` records SHA-256 checksums and sizes of every distributed artifact. Code uses the MIT license; benchmark prompts and result data use CC BY 4.0. IFEval and model weights retain their upstream licenses. The IFEval release contains strict pass indicators only, keyed by original prompt order.
 
 Unless explicitly stated otherwise, this repository does not include or distribute any third-party model weights. Users who independently download or enable third-party models or services must also comply with the applicable upstream project, model-weight, and data license terms. Use of third-party API services is subject to the applicable service providers' terms and conditions.
+
+## Citation
+
+If you use ProtectionBench, please cite:
+
+```bibtex
+@misc{li2026protectionoverridesconsequencesunderstanding,
+  title={When Protection Overrides Consequences: Understanding Protection Mode in Large Language Model Decision-Making},
+  author={Yuanfan Li and Junyi Chen and Qi Zhou and Rui Yang and ZhangLiujie and Weihang Chen},
+  year={2026},
+  eprint={2610.19948},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2610.19948},
+}
+```
